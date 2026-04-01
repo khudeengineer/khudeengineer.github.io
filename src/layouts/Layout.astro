@@ -1,0 +1,39 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="খুদে ইঞ্জিনিয়ার একাডেমি - ৬ষ্ঠ থেকে ১০ম শ্রেণির শিক্ষার্থীদের জন্য প্রোগ্রামিং ও ইলেকট্রনিক্স" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | খুদে ইঞ্জিনিয়ার একাডেমি</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="min-h-screen flex flex-col relative w-full overflow-x-hidden">
+    <!-- Subtle Background Elements -->
+    <div class="fixed inset-0 -z-10 bg-gradient-radial from-brand-800 to-brand-900 pointer-events-none"></div>
+    <div class="fixed top-0 left-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+    <div class="fixed bottom-0 right-1/4 w-96 h-96 bg-brand-green/10 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+
+    <Navbar />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

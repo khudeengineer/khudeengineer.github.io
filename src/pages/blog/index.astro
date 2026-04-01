@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+// Sort by publishDate descending
+posts.sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime());
+---
+
+<Layout title="আমাদের ব্লগ">
+  <!-- Header Pattern bg -->
+  <section class="relative pt-32 pb-20 bg-brand-900 overflow-hidden border-b border-brand-800">
+    <!-- Overlay effects -->
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-accent/5 to-brand-green/5 pointer-events-none"></div>
+    <div class="absolute -left-20 top-0 w-64 h-64 bg-brand-accent/30 rounded-full blur-[100px] opacity-40"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-white mb-6">
+        আমাদের <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-accent to-brand-green">ব্লগ</span>
+      </h1>
+      <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        প্রযুক্তি, কোডিং এবং ভবিষ্যতের ক্যারিয়ার নিয়ে নিয়মিত আপডেট ও আর্টিকেল পড়ুন।
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="py-24 relative bg-brand-900 border-t border-brand-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map(post => {
+           // format date: Year-Month-Day (simple)
+           const dateStr = new Date(post.data.publishDate).toLocaleDateString('bn-BD', { year: 'numeric', month: 'long', day: 'numeric' });
+           
+           return (
+             <a href={`/blog/${post.id}`} class="glass-card group flex flex-col overflow-hidden relative border border-brand-700/50 hover:border-brand-accent transition-all duration-300 bg-brand-800/20">
+               <!-- Post Image -->
+               <div class="h-56 relative overflow-hidden">
+                  <div class="absolute inset-0 bg-brand-900/40 group-hover:bg-brand-900/10 transition-colors z-10 duration-500"></div>
+                  <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+               </div>
+               
+               <!-- Content Area -->
+               <div class="p-6 flex-1 flex flex-col">
+                 <div class="flex items-center space-x-2 text-brand-green font-medium text-xs mb-3 font-heading uppercase tracking-wider">
+                   {post.data.tags && post.data.tags[0]}
+                   <span class="mx-2 text-brand-700">•</span>
+                   <span class="text-slate-500">{dateStr}</span>
+                 </div>
+                 
+                 <h3 class="text-2xl font-heading font-bold text-white mb-3 group-hover:text-brand-accent transition-colors leading-snug">{post.data.title}</h3>
+                 <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">{post.data.excerpt}</p>
+                 
+                 <div class="flex items-center mt-auto border-t border-brand-800/50 pt-4">
+                    <span class="text-sm font-medium text-slate-300">লেখক: {post.data.author}</span>
+                 </div>
+               </div>
+             </a>
+           )
+        })}
+      </div>
+      
+    </div>
+  </section>
+</Layout>

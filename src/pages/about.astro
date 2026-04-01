@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MentorCard from '../components/MentorCard.astro';
+import { mentors } from '../data/mentors';
+---
+
+<Layout title="আমাদের সম্পর্কে">
+  <!-- Header Banner -->
+  <section class="relative pt-32 pb-20 overflow-hidden bg-brand-900 border-b border-brand-800">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand-accent/5 to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-white mb-6">
+        আমাদের <span class="text-brand-accent">গল্প</span>
+      </h1>
+      <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        আমরা বিশ্বাস করি ছোট্ট একটি লজিক গেম থেকেই শুরু হতে পারে নেক্সট জেনারেশন উদ্ভাবনীর গল্প।
+      </p>
+    </div>
+  </section>
+
+  <!-- Vision Mission -->
+  <section class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-tr from-brand-green/20 to-brand-accent/20 rounded-3xl transform -rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
+          <img src="https://picsum.photos/seed/about/800/600" alt="ক্লাসরুম দৃশ্য" class="relative z-10 rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+        </div>
+        
+        <div>
+          <h2 class="text-3xl font-heading font-bold text-white mb-6">কেন <span class="text-brand-green">খুদে ইঞ্জিনিয়ার একাডেমি?</span></h2>
+          <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
+            <p>
+              প্রথাগত মুখস্থ বিদ্যার বাইরে গিয়ে প্রাক্টিক্যাল ও প্রজেক্ট-ভিত্তিক শেখার পরিবেশ তৈরি করাই আমাদের মূল লক্ষ্য। আমাদের প্রতিটি ক্লাস এমনভাবে সাজানো হয়েছে যেন শিক্ষার্থীরা আনন্দের সাথে প্রযুক্তি শিখতে পারে।
+            </p>
+            <p>
+              স্ক্র্যাচ দিয়ে অ্যানিমেশন বানানো হোক কিংবা পাইথন দিয়ে নিজেদের গেম তৈরি করা - প্রতিটি ক্ষেত্রেই আমরা জোর দেই লজিক্যাল থিংকিংয়ের ওপর। আমরা চাই তারা শুধু টেকনোলজি ব্যবহারকারী নয়, বরং টেকনোলজির উদ্ভাবক হয়ে উঠুক।
+            </p>
+          </div>
+          
+          <ul class="mt-8 space-y-4">
+            {['ইন্টারেক্টিভ লার্নিং', 'প্রজেক্ট বেইজড কারিকুলাম', 'অভিজ্ঞ মেন্টর প্যানেল', 'রোবোটিক্স ল্যাব ও কিট'].map(feature => (
+              <li class="flex items-center text-white">
+                <svg class="h-6 w-6 text-brand-accent mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentors Section Full Page Grid -->
+  <section class="py-24 bg-brand-800/30 border-t border-brand-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-heading font-bold text-white mb-6">আমাদের <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-green to-brand-accent">মেন্টর প্যানেল</span></h2>
+        <p class="text-slate-400 text-lg max-w-3xl mx-auto">
+          যাদের দিকনির্দেশনায় তৈরি হচ্ছে ভবিষ্যৎ প্রযুক্তিবিদরা। আমাদের মেন্টররা শুধু শিক্ষক নন, তারা শিক্ষার্থীদের বন্ধু এবং অনুপ্রেরণা।
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {mentors.map(mentor => (
+          <MentorCard mentor={mentor} />
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

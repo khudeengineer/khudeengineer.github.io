@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="যোগাযোগ করুন">
+  <!-- Header Pattern bg -->
+  <section class="relative pt-32 pb-20 bg-brand-900 overflow-hidden border-b border-brand-800">
+    <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-brand-900 to-transparent z-10"></div>
+    <!-- Abstract Glow -->
+    <div class="absolute top-10 right-10 w-96 h-96 bg-brand-accent/20 rounded-full blur-[100px] opacity-50"></div>
+    <div class="absolute bottom-10 left-10 w-72 h-72 bg-brand-orange/10 rounded-full blur-[80px] opacity-40"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-20">
+      <h1 class="text-4xl md:text-6xl font-heading font-extrabold text-white mb-6">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-orange to-brand-accent">যোগাযোগ</span> করুন
+      </h1>
+      <p class="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        আমাদের কোর্স, মেন্টরশিপ কিংবা যেকোনো বিষয়ে প্রশ্ন থাকলে নির্দ্বিধায় আমাদের সাথে যোগাযোগ করতে পারেন। 
+      </p>
+    </div>
+  </section>
+
+  <section class="py-24 relative bg-brand-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-16">
+        
+        <!-- Left Column: Contact Information Cards -->
+        <div class="lg:col-span-5 space-y-8 relative z-20">
+          <div>
+            <h2 class="text-3xl font-heading font-bold text-white mb-8">আমাদের সাথে যুক্ত হোন</h2>
+            <p class="text-slate-400 mb-8 leading-relaxed">
+               আমরা সবসময় আপনার যেকোনো প্রশ্নের উত্তর দিতে প্রস্তুত। সরাসরি আমাদের ঠিকানায় চলে আসতে পারেন অথবা নিচের যেকোনো মাধ্যমে আমাদের সাথে যোগাযোগ করতে পারেন।
+            </p>
+          </div>
+          
+          <div class="glass-card p-6 flex items-start border border-brand-700/50 hover:border-brand-accent transition-colors group">
+            <div class="flex-shrink-0 mr-6 w-14 h-14 bg-brand-800/80 rounded-full flex items-center justify-center border border-brand-700 group-hover:bg-brand-accent group-hover:border-brand-accent group-hover:text-white transition-all duration-300">
+              <svg class="w-6 h-6 text-brand-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-heading font-bold text-white mb-2">ইমেইল ঠিকানা</h4>
+              <p class="text-slate-400 mb-3 text-sm">যেকোনো প্রশ্ন বা তথ্যের জন্য</p>
+              <a href="mailto:hello@khudeengineer.com" class="text-brand-accent font-medium hover:text-white transition-colors block">
+                hello@khudeengineer.com
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 flex items-start border border-brand-700/50 hover:border-brand-green transition-colors group">
+            <div class="flex-shrink-0 mr-6 w-14 h-14 bg-brand-800/80 rounded-full flex items-center justify-center border border-brand-700 group-hover:bg-brand-green group-hover:border-brand-green group-hover:text-white transition-all duration-300">
+              <svg class="w-6 h-6 text-brand-accent group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-heading font-bold text-white mb-2">ফোন নম্বর</h4>
+              <p class="text-slate-400 mb-3 text-sm">সরাসরি কথা বলতে কল করুন</p>
+              <a href="tel:+8801234567890" class="text-brand-green font-medium hover:text-white transition-colors block">
+                +880 1234 567 890
+              </a>
+              <a href="tel:+8801987654321" class="text-brand-green font-medium hover:text-white transition-colors block">
+                +880 1987 654 321
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 flex items-start border border-brand-700/50 hover:border-brand-orange transition-colors group">
+            <div class="flex-shrink-0 mr-6 w-14 h-14 bg-brand-800/80 rounded-full flex items-center justify-center border border-brand-700 group-hover:bg-brand-orange group-hover:border-brand-orange group-hover:text-white transition-all duration-300">
+              <svg class="w-6 h-6 text-brand-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <div>
+              <h4 class="text-lg font-heading font-bold text-white mb-2">একাডেমি ঠিকানা</h4>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                বাড়ি নং-১২, রাস্তা নং-৫ <br />
+                ধানমন্ডি, ঢাকা ১২০৫ <br />
+                বাংলাদেশ
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Form -->
+        <div class="lg:col-span-7 relative z-20">
+          <div class="glass-card p-8 md:p-12 shadow-2xl bg-brand-800/40 backdrop-blur-xl border border-brand-700">
+            <h3 class="text-2xl font-heading font-bold text-white mb-6 border-l-4 border-brand-accent pl-4">ম্যাসেজ পাঠান</h3>
+            
+            <form action="#" method="POST" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                 <div>
+                   <label for="name" class="block text-sm font-medium text-slate-300 mb-2">আপনার নাম</label>
+                   <input type="text" id="name" name="name" class="w-full bg-brand-900/50 border border-brand-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition-colors" placeholder="সম্পূর্ণ নাম" required />
+                 </div>
+                 <div>
+                   <label for="phone" class="block text-sm font-medium text-slate-300 mb-2">ফোন নম্বর</label>
+                   <input type="tel" id="phone" name="phone" class="w-full bg-brand-900/50 border border-brand-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition-colors" placeholder="01XXX-XXXXXX" required />
+                 </div>
+              </div>
+              
+              <div>
+                 <label for="email" class="block text-sm font-medium text-slate-300 mb-2">ইমেইল ঠিকানা (ঐচ্ছিক)</label>
+                 <input type="email" id="email" name="email" class="w-full bg-brand-900/50 border border-brand-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition-colors" placeholder="example@mail.com" />
+              </div>
+              
+              <div>
+                 <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">বিষয়</label>
+                 <input type="text" id="subject" name="subject" class="w-full bg-brand-900/50 border border-brand-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition-colors" placeholder="কী বিষয়ে জানতে চান?" required />
+              </div>
+              
+              <div>
+                 <label for="message" class="block text-sm font-medium text-slate-300 mb-2">বিস্তারিত ম্যাসেজ</label>
+                 <textarea id="message" name="message" rows="5" class="w-full bg-brand-900/50 border border-brand-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent transition-colors resize-none" placeholder="আপনার প্রশ্ন বা মতামত এখানে লিখুন..." required></textarea>
+              </div>
+              
+              <button type="submit" class="w-full flex justify-center py-4 px-8 border border-transparent rounded-lg shadow-sm text-lg font-semibold text-white bg-brand-accent hover:bg-brand-accent-hover focus:outline-none focus:ring-4 focus:ring-brand-accent/50 transition-colors">
+                ম্যাসেজ প্রেরণ করুন
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+</Layout>
