@@ -16,7 +16,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://khudeengineer.github.io', // আপনার লাইভ ওয়েবসাইটের লিংক
+  site: 'https://khudeengineer.github.io', 
   vite: {
     plugins: [tailwindcss()]
   }
