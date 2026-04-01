@@ -1,43 +1,30 @@
-# Astro Starter Kit: Minimal
+# 🚀 Khude Engineer Academy (খুদে ইঞ্জিনিয়ার একাডেমি)
 
-```sh
-npm create astro@latest -- --template minimal
-```
+এটি "খুদে ইঞ্জিনিয়ার একাডেমি"-এর অফিসিয়াল ওয়েবসাইট। ৬ষ্ঠ থেকে ১০ম শ্রেণির শিক্ষার্থীদের ইলেকট্রনিক্স, প্রোগ্রামিং এবং আইওটি (IoT) শেখানোর লক্ষ্যে এই প্ল্যাটফর্মটি তৈরি করা হয়েছে। 
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+ওয়েবসাইটটি **Astro** ফ্রেমওয়ার্ক এবং **Tailwind CSS** ব্যবহার করে তৈরি করা হয়েছে এবং এটি স্বয়ংক্রিয়ভাবে **GitHub Pages**-এ হোস্টেড।
 
-## 🚀 Project Structure
+🌐 **লাইভ সাইট:** [https://khudeengineer.github.io](https://khudeengineer.github.io)
 
-Inside of your Astro project, you'll see the following folders and files:
+---
+
+## 📁 প্রজেক্ট স্ট্রাকচার (Project Structure)
+
+কোথায় কোন ফাইল আছে, তার একটি সংক্ষিপ্ত বিবরণ নিচে দেওয়া হলো:
 
 ```text
 /
-├── public/
+├── .github/workflows/   # গিটহাব অ্যাকশনস (অটোমেটিক বিল্ড এবং লাইভ করার কোড)
+├── public/              # ফন্ট, লোগো, এবং অন্যান্য স্ট্যাটিক ফাইল (ইমেজ)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+│   ├── components/      # ছোট ছোট UI ব্লক (যেমন: Navbar, Footer, MentorCard)
+│   ├── content/         # 📝 ওয়েবসাইটের মূল ডেটা (কোর্স এবং ব্লগ)
+│   │   ├── blog/        # ব্লগের মার্কডাউন (.md) ফাইলগুলো
+│   │   └── courses/     # কোর্সের মার্কডাউন (.md) ফাইলগুলো
+│   ├── data/            # 🧑‍🏫 মেন্টরদের ডেটাবেস (mentors.ts)
+│   ├── layouts/         # ওয়েবসাইটের গ্লোবাল লেআউট
+│   ├── pages/           # 📄 ওয়েবসাইটের পেজগুলো (Home, About, Contact)
+│   ├── styles/          # গ্লোবাল CSS ফাইল (Tailwind কনফিগারেশনসহ)
+│   └── content.config.ts # ডেটা বা কনটেন্ট কালেকশনের নিয়মকানুন (Zod Schema)
+├── astro.config.mjs     # অ্যাস্ট্রোর মূল কনফিগারেশন (সাইটের লিংক এখানেই আছে)
+└── package.json         # প্রয়োজনীয় প্যাকেজ বা লাইব্রেরির তালিকা
