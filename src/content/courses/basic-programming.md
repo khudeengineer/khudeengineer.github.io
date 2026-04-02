@@ -4,7 +4,7 @@ short_description: "৬ষ্ঠ থেকে ১০ম শ্রেণির �
 duration: "৬ মাস"
 mentor_id: "mentor-1"
 order: 1
-image: "https://picsum.photos/seed/course1/800/600"
+image: "/images/course-1.webp"
 modules:
   - title: "Basic Electronics"
     description: "রেজিস্টর, ক্যাপাসিটর, এলইডি এবং সেন্সরের ব্যবহারিক পরিচিতি।"

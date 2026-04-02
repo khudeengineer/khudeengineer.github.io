@@ -11,7 +11,7 @@ export const mentors: Mentor[] = [
     id: "mentor-1",
     name: "মেহেদী হাসান",
     expertise: "প্রোগ্রামিং ও রোবোটিক্স এক্সপার্ট",
-    image: "https://picsum.photos/seed/mentor1/400/400",
+    image: "https://www.bubt.edu.bd/storage/faculty_images/mehedi-hasan_22130162024_372784e3-6848-48bc-aed6-2f329a494f5c.jpg",
     bio: "মেহেদী ভাইয়া গত  vai ৫ বছর ধরে ছোটদের প্রোগ্রামিং এবং রোবোটিক্স শিখিয়ে আসছেন। জটিল কোডিং লজিককে মজার গল্পের ছলে বোঝানোই তার সবচেয়ে বড় স্পেশালিটি।"
   },
   {
