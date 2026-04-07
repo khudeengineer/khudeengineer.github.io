@@ -12,7 +12,8 @@ const courses = defineCollection({
     image: z.string().optional(),
     modules: z.array(z.object({
       title: z.string(),
-      description: z.string()
+      description: z.string(),
+      price: z.string().optional()
     })).optional()
   })
 });

@@ -94,7 +94,14 @@ const recentBlogs = blogs.slice(0, 3);
               <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {course.data.modules.map((module, index) => (
                    <div class="bg-brand-800/60 p-5 rounded-xl border border-brand-700/50 hover:border-brand-green/50 transition-colors cursor-default">
-                     <div class="text-brand-accent font-bold text-sm mb-2 opacity-80">মডিউল {index + 1}</div>
+                     <div class="flex justify-between items-start mb-2">
+                       <div class="text-brand-accent font-bold text-sm opacity-80">মডিউল {index + 1}</div>
+                       {module.price && (
+                         <span class="text-brand-orange/90 text-[10px] font-bold px-2 py-0.5 rounded-full bg-brand-orange/10 border border-brand-orange/20">
+                           {module.price}
+                         </span>
+                       )}
+                     </div>
                      <h5 class="text-white font-semibold mb-2">{module.title}</h5>
                      <p class="text-sm text-slate-400 line-clamp-3 leading-relaxed">{module.description}</p>
                    </div>

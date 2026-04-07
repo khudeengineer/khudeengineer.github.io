@@ -8,12 +8,16 @@ image: "/images/course-1.webp"
 modules:
   - title: "Basic Electricity"
     description: "বিদ্যুৎ , রোধ ,রেজিস্টর, ক্যাপাসিটর, এলইডি এবং সার্কিটের ব্যবহারিক পরিচিতি।"
+    price: "৳ ৫০০"
   - title: "Basic Programming"
     description: "ডাটা টাইপ , ভ্যারিয়েবল , কন্ডিশন , লুপ, ফাংশন এবং ছোট প্রজেক্ট। "
+    price: "৳ ৫০০"
   - title: "Arduino / Microcontroller"
     description: "এলইডি জ্বালানো থেকে শুরু করে সেন্সর যুক্ত করা এবং শেষে পুরো প্রজেক্ট। "
+    price: "৳ ৫০০"
   - title: "IoT / Robotics"
     description: "সব কিছু কন্ট্রোল হবে মোবাইলের মাধ্যমে কিংবা রোবট নিজেই  চলবে লাইন ধরে ধরে।"
+    price: "৳ ৫০০"
 ---
 
 ## 🚀 খুদে ইঞ্জিনিয়ার

@@ -80,8 +80,15 @@ const mentor = mentors.find(m => m.id === course.data.mentor_id) || mentors[0];
                     <div class="flex-shrink-0 w-12 h-12 bg-brand-800 rounded-full flex items-center justify-center text-xl font-bold font-heading text-brand-accent border border-brand-700 group-hover:bg-brand-accent group-hover:text-white group-hover:border-brand-accent transition-colors mr-4">
                       {index + 1}
                     </div>
-                    <div>
-                      <h3 class="text-xl font-heading font-semibold text-white mb-2 group-hover:text-brand-accent transition-colors">{module.title}</h3>
+                    <div class="flex-1">
+                      <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-heading font-semibold text-white group-hover:text-brand-accent transition-colors">{module.title}</h3>
+                        {module.price && (
+                          <span class="px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/30 text-brand-orange text-xs font-bold whitespace-nowrap ml-4">
+                            {module.price}
+                          </span>
+                        )}
+                      </div>
                       <p class="text-slate-400 text-sm leading-relaxed">{module.description}</p>
                     </div>
                   </div>
